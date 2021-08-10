@@ -14,7 +14,7 @@ const phoneModels = [
 ];
 describe('Login Page Logo On Mobile', () => {
   phoneModels.forEach((model) => {
-    it(`Should display Eventy logo on ${model} screen`, () => {
+    it(`Should display Eventy Logo on ${model} screen`, () => {
       cy.viewport(model);
       cy.visit(Cypress.env('baseUrl'));
       cy.get('.brand-logo').should('be.visible');
