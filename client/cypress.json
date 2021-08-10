@@ -1,8 +1,10 @@
 {
 
     "retries": 1,
-        "chromeWebSecurity": false,
+        "chromeWebSecurity": true,
           "env":{
-            "url": "http://localhost:3000/events"
+            "baseUrl": "http://localhost:3000",
+            "registerUrl": "http://localhost:3000/register",
+            "loginUrl" : "http://localhost:3000/login"
           }
 }
