@@ -14,7 +14,7 @@ const phoneModels = [
 ];
 describe('Login Page Logo On Mobile', () => {
   phoneModels.forEach((model) => {
-    it(`Should display logo on ${model} screen`, () => {
+    it(`Should display Eventy logo on ${model} screen`, () => {
       cy.viewport(model);
       cy.visit(Cypress.env('baseUrl'));
       cy.get('.brand-logo').should('be.visible');
@@ -25,7 +25,7 @@ describe('Login Page Logo On Mobile', () => {
 
   describe('Login Page Logo On Desktop', () => {
     macVersions.forEach((version) => {
-      it(`Should display login logo on  ${version}`, () => {
+      it(`Should display logo on  ${version}`, () => {
         cy.viewport(version);
         cy.get('.brand-logo').should('be.visible');
       });
