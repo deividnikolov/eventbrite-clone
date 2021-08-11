@@ -1,5 +1,5 @@
 {
-
+  "video": false,
     "retries": 1,
         "chromeWebSecurity": true,
           "env":{
@@ -7,4 +7,5 @@
             "registerUrl": "http://localhost:3000/register",
             "loginUrl" : "http://localhost:3000/login"
           }
+         
 }

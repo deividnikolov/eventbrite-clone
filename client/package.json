@@ -12,7 +12,7 @@
     "lint": "tslint -p ./",
     "tsc:watch": "tsc -p ./ --noEmit -w",
     "reinstall": "rm -rf ./node_modules && npm install",
-    "test:e2e": "todo", 
+    "test:e2e": "todo",
     "cypress:open": "cypress open"
   },
   "dependencies": {
