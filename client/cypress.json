@@ -1,0 +1,14 @@
+{
+
+  "baseUrl": "http://localhost:3000/",
+    "video": false,
+      "retries": 0,
+        "chromeWebSecurity": true
+        
+}
+        
+         
+
+
+
+

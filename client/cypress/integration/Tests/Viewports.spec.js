@@ -12,14 +12,21 @@ const phoneModels = [
   'samsung-note9',
   'samsung-s10',
 ];
-describe('Login Page Logo On Mobile', () => {
+describe('Eventy Logo On Mobile', () => {
   phoneModels.forEach((model) => {
     it(`Should display Eventy Logo on ${model} screen`, () => {
-      cy. viewport(model);
-      cy.visit(Cypress.
-        env('baseUrl'));
-      cy.get('.brand-logo')
-      .should('be.visible');
+      cy
+      .viewport(model);
+      cy
+      .visit('/');
+      cy
+      .injectAxe();
+      cy
+      .checkA11y(
+        '.brand-logo',
+        {includedImpacts: ['critical','serious']}); // brand logo must have sufficient color contrast
+      cy
+      .get('.brand-logo').should('be.visible');
     });
   });
 
@@ -27,15 +34,17 @@ describe('Login Page Logo On Mobile', () => {
     'macbook-11',
     'macbook-13',
     'macbook-15',
-    'macbook-16'  
+    'macbook-16',
   ];
-
-  describe('Login Page Logo On Desktop', () => {
+  describe('Eventy Logo On Desktop', () => {
     macVersions.forEach((version) => {
       it(`Should display logo on  ${version}`, () => {
-        cy.viewport(version);
-        cy.get('.brand-logo')
+        cy
+        .viewport(version);
+        cy
+        .get('.brand-logo')
         .should('be.visible');
+
       });
     });
   });
