@@ -11,7 +11,7 @@ describe('sending requests', () => {
         email: 'ash1@gmail.com',
         password: 'axe',
       },
-    })
+  });
       .its('body')
       .then((res) => cy.log(res.token));
   });
@@ -26,9 +26,7 @@ describe('sending requests', () => {
       expect(response.body.page).to.have.property('size', 20);
     });
   });
-   
-
-   })
+ });
 
  
 
