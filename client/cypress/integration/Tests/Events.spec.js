@@ -34,7 +34,10 @@ describe('Events Tests', () => {
       cy
       .contains('There are no events added to your favorites list!')
       .should('be.visible')
-      .and('have.css','color','rgba(0, 0, 0, 0.87)')
+      .and(
+        'have.css',
+        'color',
+        'rgba(0, 0, 0, 0.87)')
 
   });
 

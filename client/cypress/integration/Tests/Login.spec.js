@@ -38,8 +38,11 @@ describe('Login Tests', () => {
      .errorMessage()
      .should(
      'have.text', 
-     'Unauthorized!'
-     ).and('have.css', 'color', 'rgb(255, 82, 82)')
+     'Unauthorized!' )
+     .and(
+       'have.css',
+        'color', 
+       'rgb(255, 82, 82)')
 
   });
   it(' 4️⃣ should not be able to login using a username', () => {
@@ -49,8 +52,11 @@ describe('Login Tests', () => {
       .errorMessage()
       .should(
       'have.text',
-      'ValidationError: "email" must be a valid email!'
-      ).and('have.css', 'color', 'rgb(255, 82, 82)')
+      'ValidationError: "email" must be a valid email!')
+      .and(
+        'have.css',
+        'color',
+        'rgb(255, 82, 82)')
       
   });
   it(' 5️⃣ should not be able to login with an empty email', () => {
@@ -61,8 +67,11 @@ describe('Login Tests', () => {
      .errorMessage()
      .should(
      'have.text',
-     'ValidationError: "email" is not allowed to be empty!'
-    ).and('have.css', 'color', 'rgb(255, 82, 82)')
+     'ValidationError: "email" is not allowed to be empty!')
+     .and(
+       'have.css',
+       'color',
+       'rgb(255, 82, 82)')
   });
   it(' 6️⃣ should not be able to login with an empty password', () => {
     LoginPage.enterEmail('ash1@gmail.com')
@@ -72,8 +81,11 @@ describe('Login Tests', () => {
      .errorMessage()
      .should(
      'have.text',
-     'ValidationError: "password" is not allowed to be empty!'
-    ).and('have.css', 'color', 'rgb(255, 82, 82)'); 
-    
+     'ValidationError: "password" is not allowed to be empty!')
+     .and(
+      'have.css',
+      'color',
+     'rgb(255, 82, 82)'); 
+  
    });
 });
