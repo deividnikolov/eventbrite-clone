@@ -16,10 +16,4 @@ describe('Accessibility tests for the LoginPage', () => {
       .checkA11y(
         'form',{includedImpacts: ['critical','serious']});
     });
-    
-    
-
-
-
-
 });
