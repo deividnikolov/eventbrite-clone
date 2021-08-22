@@ -42,6 +42,7 @@ describe('Login Tests', () => {
      ).and('have.css', 'color', 'rgb(255, 82, 82)')
 
   });
+  
   it(' 4️⃣ should not be able to login using a username', () => {
     LoginPage.login('username', 'axe1');
     LoginPage
@@ -53,6 +54,7 @@ describe('Login Tests', () => {
       ).and('have.css', 'color', 'rgb(255, 82, 82)')
       
   });
+  
   it(' 5️⃣ should not be able to login with an empty email', () => {
     LoginPage.enterPassword('axe');
     LoginPage.clickLoginButton();
@@ -63,7 +65,9 @@ describe('Login Tests', () => {
      'have.text',
      'ValidationError: "email" is not allowed to be empty!'
     ).and('have.css', 'color', 'rgb(255, 82, 82)')
+    
   });
+  
   it(' 6️⃣ should not be able to login with an empty password', () => {
     LoginPage.enterEmail('ash1@gmail.com')
     LoginPage.clickLoginButton();
