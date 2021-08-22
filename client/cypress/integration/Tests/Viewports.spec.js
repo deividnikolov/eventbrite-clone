@@ -24,7 +24,7 @@ describe('Eventy Logo On Mobile', () => {
       cy
       .checkA11y(
         '.brand-logo',
-        {includedImpacts: ['critical','serious']}); // brand logo must have sufficient color contrast
+        {includedImpacts: ['critical','serious','moderate']}); // brand logo must have sufficient color contrast
       cy
       .get('.brand-logo').should('be.visible');
     });

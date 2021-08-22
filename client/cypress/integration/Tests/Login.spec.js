@@ -13,7 +13,7 @@ describe('Login Tests', () => {
     .should('include', 'login');
 
   });
-  it('should login with valid credentials', () => {
+  it(' 1️⃣ should login with valid credentials', () => {
     LoginPage.login('ash1@gmail.com', 'axe');
     cy
     .contains('Find your next experience')
@@ -21,7 +21,7 @@ describe('Login Tests', () => {
 
   });
 
-  it('should be able to logout', () => {
+  it(' 2️⃣ should be able to logout', () => {
     LoginPage.login('ash1@gmail.com', 'axe');
     cy
     .wait(1000);
@@ -31,27 +31,29 @@ describe('Login Tests', () => {
     .should('be.visible');
 
   });
-  it('should not login with invalid credentials', () => {
+  it(' 3️⃣ should not login with invalid credentials', () => {
     LoginPage.login('ash1@gmail.com', 'axe1');
     LoginPage
     .elements
      .errorMessage()
      .should(
      'have.text', 
-     'Unauthorized!');
+     'Unauthorized!'
+     ).and('have.css', 'color', 'rgb(255, 82, 82)')
 
   });
-  it('should not be able to login using a username', () => {
+  it(' 4️⃣ should not be able to login using a username', () => {
     LoginPage.login('username', 'axe1');
     LoginPage
     .elements
       .errorMessage()
       .should(
       'have.text',
-      'ValidationError: "email" must be a valid email!');
+      'ValidationError: "email" must be a valid email!'
+      ).and('have.css', 'color', 'rgb(255, 82, 82)')
       
   });
-  it('should not be able to login with an empty email', () => {
+  it(' 5️⃣ should not be able to login with an empty email', () => {
     LoginPage.enterPassword('axe');
     LoginPage.clickLoginButton();
     LoginPage
@@ -60,9 +62,9 @@ describe('Login Tests', () => {
      .should(
      'have.text',
      'ValidationError: "email" is not allowed to be empty!'
-      );
+    ).and('have.css', 'color', 'rgb(255, 82, 82)')
   });
-  it('should not be able to login with an empty password', () => {
+  it(' 6️⃣ should not be able to login with an empty password', () => {
     LoginPage.enterEmail('ash1@gmail.com')
     LoginPage.clickLoginButton();
     LoginPage
@@ -71,6 +73,7 @@ describe('Login Tests', () => {
      .should(
      'have.text',
      'ValidationError: "password" is not allowed to be empty!'
-    );
-});
+    ).and('have.css', 'color', 'rgb(255, 82, 82)'); 
+    
+   });
 });

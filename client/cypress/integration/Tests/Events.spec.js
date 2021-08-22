@@ -15,7 +15,7 @@ describe('Events Tests', () => {
       .login('ash1@gmail.com','axe');
       
     });
-    it('should add an event to My Favorites', () => {
+    it(' 1️⃣ should add an event to My Favorites', () => {
       EventsPage.clickAddEvent();
       EventsPage.clickMyFavBtn();
      cy
@@ -27,34 +27,35 @@ describe('Events Tests', () => {
       EventsPage.clickRemoveEvent();
 
     });
-    it('should remove the event from My Favorites', () => {
+    it(' 2️⃣ should remove the event from My Favorites', () => {
       EventsPage.clickAddEvent();
       EventsPage.clickMyFavBtn();
       EventsPage.clickRemoveEvent();
       cy
       .contains('There are no events added to your favorites list!')
-      .should('be.visible');
+      .should('be.visible')
+      .and('have.css','color','rgba(0, 0, 0, 0.87)')
 
   });
 
-    it('should find an event by City', () => {
+    it.only(' 3️⃣ should find an event by City', () => {
      EventsPage.enterEventCity('Chicago');
      EventsPage.clickSearchBtn();
      cy
-      .contains('Chicago White Sox vs. New York Yankees')
+      .contains('Chicago')
       .should('be.visible');
     
     });
-    it('should find an event by Name', () => {
-     EventsPage.enterEventName('Baltimore Ravens')
+    it(' 4️⃣ should find an event by Name', () => {
+     EventsPage.enterEventName('Sacramento Kings')
      EventsPage.clickSearchBtn();
      cy
-      .contains('Las Vegas Raiders vs. Baltimore Ravens')
+      .contains('Sacramento Kings')
       .should('be.visible');
 
     });
 
-    it('should not be able to find an event by adding invalid data', () => {
+    it(' 5️⃣ should not be able to find an event by adding invalid data', () => {
       EventsPage.enterEventName('invalid')
       EventsPage.clickSearchBtn();
       cy

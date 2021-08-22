@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-it('should navigate to events page', () => {
+it(' 1️⃣ should navigate to events page', () => {
   cy
     .visit('/')                                                     
   cy
@@ -11,7 +11,7 @@ it('should navigate to events page', () => {
   
 });
 
-it('should navigate to register page', () => {
+it(' 2️⃣ should navigate to register page', () => {
   cy
      .visit('register')
   cy
@@ -23,7 +23,7 @@ it('should navigate to register page', () => {
 
 });
 
-it('should navigate to login page', () => {
+it(' 3️⃣ should navigate to login page', () => {
   cy
     .visit('login')
   cy

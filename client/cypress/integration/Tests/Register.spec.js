@@ -10,8 +10,7 @@ it('should register with valid credentials', () => {
  cy
  .contains('Email is already in use!')
  .should('be.visible');
-
-   });
+  });
 });
 
 

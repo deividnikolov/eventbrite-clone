@@ -7,20 +7,14 @@ describe('Accessibility tests for the RegisterPage', () => {
       .injectAxe();
   
     });
-    it('should test for any issues in Register ', () => {
+    it(" 1️⃣ should test for any issues in Register", () => {
       cy
       .checkA11y(
-          null,{includedImpacts: ['critical','serious','moderate']});  
+        null,{includedImpacts: ['critical','serious','moderate']});  
     });
-    it('should test the form in Register', () => {
+    it(" 2️⃣ should test the form in Register", () => {
       cy
       .checkA11y(
         'form',{includedImpacts: ['critical','serious']});
     });
-    
-    
-
-
-
-
-});
+  })
