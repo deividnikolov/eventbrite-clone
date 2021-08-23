@@ -41,7 +41,7 @@ describe('Login Tests', () => {
      'Unauthorized!' )
      .and(
        'have.css',
-        'color', 
+       'color', 
        'rgb(255, 82, 82)')
 
   });
@@ -85,6 +85,6 @@ describe('Login Tests', () => {
      .and(
       'have.css',
       'color',
-     'rgb(255, 82, 82)');   
+      'rgb(255, 82, 82)');   
    });
 });
